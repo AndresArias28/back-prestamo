@@ -5,6 +5,8 @@ dotenv.config();
 app.use(express.json());
 
 app.use("/api", require("./router/prestamoRouter"));
+app.use("/api", require("./router/libroRouter"));
+app.use("/api", require("./router/usuarioRouter"));
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

@@ -1,4 +1,5 @@
 const {Prestamo} = require('../models');
+
 class PrestamoService {
     static async obtenerPrestamos() {
         try {
