@@ -16,6 +16,15 @@ class UsuarioService {
             console.log(error);
         }
     }
+
+    static async deleteUsuario(id) {
+        try {
+            return await Usuario.destroy({ where: { id } });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
 }
 
 module.exports = UsuarioService;

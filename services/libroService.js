@@ -14,5 +14,13 @@ class LibroService{
             console.log(error);
         }
     }
+
+    static async deleteLibro(id) {
+        try {
+            return await Libro.destroy({ where: { id } });
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 module.exports = LibroService

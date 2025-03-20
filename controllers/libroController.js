@@ -19,6 +19,16 @@ class LibroController {
             res.status(500).json({ message: 'Error creando libro', error: error.message });
         }
     };
+
+    static async deleteLibro(req, res) {
+        try {
+            const id = req.params.id;
+            const libro = await libroService.deleteLibro(id);
+            res.status(200).json({ message: 'Libro eliminado', libro });
+        } catch (error) {
+            res.status(500).json({ message: 'Error eliminando libro', error: error.message });
+        }
+    }; 
 }
 
 module.exports = LibroController;

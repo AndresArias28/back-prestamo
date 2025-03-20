@@ -12,8 +12,8 @@ class PrestamoController {
 
     static async crearPrestamo(req, res) {
         try {
-            let {fechaPrestamo, fechaDevolucion, estado} = req.body;// destructuring de un objeto
-            let prestamo = await PrestamoService.crearPrestamo(fechaPrestamo, fechaDevolucion, estado);
+            //let {fechaprestamo, fechadevolucion, estado} = req.body;// destructuring de un objeto
+            let prestamo = await PrestamoService.crearPrestamo(req.body);
             res.json(prestamo);
         } catch (error) {
             res.json({ error: error });

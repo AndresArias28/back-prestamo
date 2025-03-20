@@ -9,9 +9,9 @@ class PrestamoService {
         }
     }
 
-    static async crearPrestamo(fechaPrestamo, fechaDevolucion, estado) {
+    static async crearPrestamo(prestamo) {
         try {
-            return await Prestamo.create({fechaPrestamo, fechaDevolucion, estado});
+            return await Prestamo.create(prestamo);
         } catch (error) {
             console.log(error);
         }
